@@ -1,0 +1,67 @@
+body {
+   background-color: rgb(6, 3, 28);
+   color: white;
+   text-shadow: wheat;
+   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+   /* font-family: cursive; */
+   /* font-family: sans-serif; */
+}
+
+h1 {
+   /* margin-left: 50px; */
+   /* color: yellow; */
+}
+
+.underline {
+   width: 80vw;
+   /* margin: 0x; */
+   align-self: center;
+   border-bottom: 5px solid rgb(2, 183, 248);
+}
+
+.underline-wide {
+   width: 95vw;
+   border-width: 10px;
+}
+
+p {
+}
+
+.all-container {
+   display: flex;
+   flex-direction: column;
+}
+
+.project {
+   margin: 2vw;
+   display: flex;
+   flex-direction: column;
+   /* justify-items: center; */
+   /* justify-content: center; */
+   /* align-items: center; */
+   /* border-bottom: 5px solid rgb(2, 183, 248); */
+}
+
+.image {
+   width: 70vw;
+   height: 70vw;
+   align-self: center;
+   border-radius: 10px;
+   border: 5px;
+   border-style: solid;
+   border-color: rgb(2, 183, 248);
+   margin: 1rem;
+}
+
+.github-btn {
+   width: 2rem;
+   height: 2rem;
+   background-color: rgb(109, 7, 241);
+   margin: 0.5rem;
+   border-radius: 5px;
+}
+
+.project-head {
+   display: flex;
+   align-items: center;
+}
