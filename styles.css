@@ -7,14 +7,8 @@ body {
    /* font-family: sans-serif; */
 }
 
-h1 {
-   /* margin-left: 50px; */
-   /* color: yellow; */
-}
-
 .underline {
    width: 80vw;
-   /* margin: 0x; */
    align-self: center;
    border-bottom: 5px solid rgb(2, 183, 248);
 }
@@ -37,10 +31,6 @@ p {
    margin: 2vw;
    display: flex;
    flex-direction: column;
-   /* justify-items: center; */
-   /* justify-content: center; */
-   /* align-items: center; */
-   /* border-bottom: 5px solid rgb(2, 183, 248); */
 }
 
 .image {
@@ -72,4 +62,9 @@ p {
 .project-head {
    display: flex;
    align-items: center;
+}
+
+.disabled {
+   pointer-events: none;
+   opacity: 0.4;
 }
