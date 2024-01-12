@@ -25,6 +25,7 @@ h1 {
 }
 
 p {
+   margin-top: 0;
 }
 
 .all-container {
@@ -54,23 +55,18 @@ p {
 }
 
 .github-btn {
+   display: flex;
    width: 4rem;
-   height: 2rem;
+   height: 1.2rem;
    background-color: rgb(109, 7, 241);
    margin: 0.5rem;
    border-radius: 5px;
    color: white;
    text-decoration: none;
-   text-align: center;
-   /* justify-self: center; */
-   /* align-self: center; */
    font-weight: bold;
    font-size: 0.9rem;
-   /* text-justify: center;
-   align-content: center;
    justify-content: center;
-   align-content: center;
-   justify-content: center; */
+   align-items: center;
 }
 
 .project-head {
