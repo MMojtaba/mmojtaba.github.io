@@ -35,7 +35,7 @@ p {
 
 .image {
    width: 70vw;
-   height: 70vw;
+   height: auto;
    align-self: center;
    border-radius: 10px;
    border: 5px;
