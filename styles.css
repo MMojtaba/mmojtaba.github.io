@@ -54,11 +54,23 @@ p {
 }
 
 .github-btn {
-   width: 2rem;
+   width: 4rem;
    height: 2rem;
    background-color: rgb(109, 7, 241);
    margin: 0.5rem;
    border-radius: 5px;
+   color: white;
+   text-decoration: none;
+   text-align: center;
+   /* justify-self: center; */
+   /* align-self: center; */
+   font-weight: bold;
+   font-size: 0.9rem;
+   /* text-justify: center;
+   align-content: center;
+   justify-content: center;
+   align-content: center;
+   justify-content: center; */
 }
 
 .project-head {
