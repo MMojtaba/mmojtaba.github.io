@@ -11,6 +11,7 @@ body {
    width: 80vw;
    align-self: center;
    border-bottom: 5px solid rgb(2, 183, 248);
+   margin-top: 5vh;
 }
 
 .underline-wide {
