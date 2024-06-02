@@ -72,7 +72,10 @@ function handleSelectProject(index) {
 // Replaces the given element by a similar element, but with a different HTML tag
 function replaceTag(element, newTag, newSource) {
   // Don't need to replace the tag
-  if (element.tagName === newTag) return;
+  if (element.tagName === newTag.toUpperCase()) {
+    element.src = newSource;
+    return;
+  }
 
   // Replace the tag
   const newElement = document.createElement(newTag);
