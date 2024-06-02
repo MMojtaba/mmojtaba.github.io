@@ -6,87 +6,60 @@
     <title>Mojtaba's Projects</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
     <!-- JavaScripts -->
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="styles/tailwindcss.3"></script>
   </head>
-  <body class="all-container">
-    <h1>About</h1>
-    <p>I'm Mojtaba and I love programming, soccer, and video games!</p>
-    <div class="underline underline-wide"></div>
-    <h1>My Projects</h1>
-    <p>Here are my notable projects.</p>
-    <div class="underline underline-wide"></div>
+  <body class="flex flex-row">
+    <!-- The left selection part -->
+    <section class="flex flex-col w-1/5 m-4">
+      <h1 class="text-4xl">My Projects</h1>
+      <div class="underline"></div>
 
-    <!-- Paintings project -->
-    <div class="project">
-      <div class="project-head">
-        <h2>Paintings AngularJS</h2>
+      <img
+        class="media"
+        src="./assets/paintingsAngularJS/img1.png"
+        onclick="handleSelectProject(0)" />
+      <img
+        class="media"
+        src="./assets/snakeEvolution/img1.png"
+        onclick="handleSelectProject(1)" />
+      <img
+        class="media"
+        src="./assets/teamerinoAngular/img1.png"
+        onclick="handleSelectProject(2)" />
+      <img
+        class="media"
+        src="./assets/teamerinoAngular/img1.png"
+        onclick="handleSelectProject(3)" />
+    </section>
+
+    <!-- The selected project's info -->
+    <section class="w-3/4 m-4 flex flex-col items-center">
+      <!-- Title section -->
+      <span class="flex flex-row items-center">
+        <h1 id="main-title" class="text-4xl">Paintings Display</h1>
         <a
+          id="main-link"
           class="github-btn"
           href="https://github.com/MMojtaba/paintings-angularjs"
           >GitHub</a
         >
-      </div>
-      <p>
-        Web app for displaying paintings. Made using AngularJS, Express, and
-        MongoDB.
-      </p>
+      </span>
+      <!-- Video/Image -->
       <iframe
-        class="media height-70"
+        id="main-video"
+        class="media w-11/12 h-4/6"
         src="https://www.youtube.com/embed/_dd8cADE_Po"
         allowfullscreen></iframe>
-      <div class="underline"></div>
-    </div>
-
-    <!-- Snake Evolution project -->
-    <div class="project">
-      <div class="project-head">
-        <h2>Snake Evolution</h2>
-        <a class="github-btn" href="https://github.com/MMojtaba/snake_evolution"
-          >GitHub</a
-        >
-      </div>
-      <p>The snake game made using C++ and OpenGL.</p>
-      <iframe
-        class="media height-70"
-        src="https://www.youtube.com/embed/BZs0yAohxcM"
-        allowfullscreen></iframe>
-      <div class="underline"></div>
-    </div>
-
-    <!-- Teamerino Angular project -->
-    <div class="project">
-      <div class="project-head">
-        <h2>Teamerino Angular (coming soon...)</h2>
-        <a class="github-btn disabled" href="">Site</a>
-      </div>
-      <p>
-        A complete remake of my Teamerino web application, made using Angular
-        (TypeScript), Express (TypeScript), and MongoDB.
+      <!-- Description -->
+      <p id="main-descr">
+        Website for displaying paintings. Made using AngularJS, Express, and
+        MongoDB.
       </p>
-      <img class="media" src="./assets/teamerinoAngular/img1.png" />
-      <!-- TODO: Insert demo video -->
-      <div class="underline"></div>
-    </div>
-
-    <!-- Teamerino Original Project -->
-    <div class="project">
-      <div class="project-head">
-        <h2>Teamerino Original</h2>
-        <a class="github-btn" href="https://github.com/MMojtaba/teamerino"
-          >GitHub</a
-        >
-      </div>
-      <p>
-        The initial iteration of my Teamerino web application made using React
-        (JavaScript), Asp.Net Core (C#), and MySQL.
-      </p>
-      <!-- TODO: Insert pictures -->
-      <img class="media" src="./assets/teamerinoOriginal/img1.png" />
-      <!-- TODO: Insert demo video -->
-      <div class="underline"></div>
-    </div>
+    </section>
   </body>
 </html>
