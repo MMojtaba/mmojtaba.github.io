@@ -5,6 +5,10 @@ body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+h1 {
+  font-size: 3vw !important;
+}
+
 .underline {
   border-bottom: 5px solid rgb(2, 183, 248);
 }
