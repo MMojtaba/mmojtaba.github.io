@@ -36,8 +36,18 @@ const teamerinoOriginal = {
 };
 projectInfos.push(teamerinoOriginal);
 
+// Switch the shown project in an interval
+const intervalFuncId = setInterval(function () {
+  selectedProject++;
+  if (selectedProject >= projectInfos.length) selectedProject = 0;
+  handleSelectProject(selectedProject, false);
+}, 5000);
+
 // Changes the shown project when the user clicks one
-function handleSelectProject(index) {
+function handleSelectProject(index, userAction = true) {
+  // Stop auto switching if user selects a project
+  if (userAction) clearInterval(intervalFuncId);
+
   selectedProject = index;
 
   playSwitchAnimation();
