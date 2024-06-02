@@ -47,3 +47,19 @@ body {
   border-color: rgb(109, 7, 241);
   border-width: 0.3rem;
 }
+
+@keyframes brightness-change {
+  0% {
+    filter: brightness(0);
+  }
+  50% {
+    filter: brightness(0.5);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+.switch-animation {
+  animation: brightness-change 1s infinite;
+}

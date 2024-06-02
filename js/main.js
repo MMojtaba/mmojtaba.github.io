@@ -40,6 +40,8 @@ projectInfos.push(teamerinoOriginal);
 function handleSelectProject(index) {
   selectedProject = index;
 
+  playSwitchAnimation();
+
   //   Changes which element is set as active in the list of project
   changeSelectedList();
 
@@ -98,5 +100,19 @@ function changeSelectedList() {
     if (!element) continue;
     if (i === selectedProject) element.classList.add("selected-element");
     else element.classList.remove("selected-element");
+  }
+}
+
+// Animates switching the selected project
+function playSwitchAnimation() {
+  const selectedContainerElement = document.getElementById(
+    "selected-project-container"
+  );
+  if (selectedContainerElement) {
+    selectedContainerElement.classList.add("switch-animation");
+    window.setTimeout(
+      () => selectedContainerElement.classList.remove("switch-animation"),
+      1000
+    );
   }
 }
