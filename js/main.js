@@ -40,6 +40,9 @@ projectInfos.push(teamerinoOriginal);
 function handleSelectProject(index) {
   selectedProject = index;
 
+  //   Changes which element is set as active in the list of project
+  changeSelectedList();
+
   //   Set title
   const titleElement = document.getElementById("main-title");
   if (titleElement)
@@ -86,4 +89,14 @@ function replaceTag(element, newTag, newSource) {
   if (newTag === "img") newElement.style.height = "auto";
   else if (newTag === "iframe") newElement.setAttribute("allowfullscreen", "");
   element.parentNode.replaceChild(newElement, element);
+}
+
+// Changes the style of the selected project
+function changeSelectedList() {
+  for (let i = 0; i < projectInfos.length; ++i) {
+    const element = document.getElementById("proj-" + i);
+    if (!element) continue;
+    if (i === selectedProject) element.classList.add("selected-element");
+    else element.classList.remove("selected-element");
+  }
 }

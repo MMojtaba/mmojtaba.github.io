@@ -2,10 +2,7 @@ body {
   background-color: rgb(6, 3, 28);
   color: white;
   text-shadow: 1px 1px 2px rgb(166, 0, 255), 0 0 0.5em rgb(10, 163, 246);
-
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  /* font-family: cursive; */
-  /* font-family: sans-serif; */
 }
 
 .underline {
@@ -13,14 +10,22 @@ body {
 }
 
 .media {
-  /* width: 70vw; */
   height: auto;
   align-self: center;
   border-radius: 10px;
-  border: 5px;
+  border: 0.1rem;
   border-style: solid;
   border-color: rgb(2, 183, 248);
   margin: 1rem;
+}
+
+.media-list:hover {
+  filter: brightness(110%);
+  border-color: rgb(29, 114, 194);
+  transition: border-color 0.3s ease-in-out;
+  transition: border-width 0.3s ease-in-out;
+
+  border-width: 0.3rem;
 }
 
 .github-btn {
@@ -36,4 +41,9 @@ body {
   font-size: 0.9rem;
   justify-content: center;
   align-items: center;
+}
+
+.selected-element {
+  border-color: rgb(109, 7, 241);
+  border-width: 0.3rem;
 }
