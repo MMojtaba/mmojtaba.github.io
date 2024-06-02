@@ -81,5 +81,6 @@ function replaceTag(element, newTag, newSource) {
   newElement.src = newSource;
 
   if (newTag === "img") newElement.style.height = "auto";
+  else if (newTag === "iframe") newElement.setAttribute("allowfullscreen", "");
   element.parentNode.replaceChild(newElement, element);
 }
