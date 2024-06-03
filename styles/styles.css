@@ -67,3 +67,32 @@ h1 {
 .switch-animation {
   animation: brightness-change 1s infinite;
 }
+
+@media (orientation: portrait) {
+  .main-container {
+    flex-direction: column-reverse !important;
+  }
+
+  .proj-list-container {
+    flex-direction: row !important;
+    align-items: center;
+    /* justify-items: center !important; */
+  }
+
+  .proj-list-container > h1 {
+    display: none;
+  }
+
+  #selected-project-container {
+    align-self: center;
+  }
+
+  #main-video {
+    width: 90vw;
+    max-width: 90vw;
+  }
+
+  iframe {
+    height: 35vh !important;
+  }
+}
