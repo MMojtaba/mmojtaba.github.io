@@ -10,6 +10,14 @@ const paintingsAngularJS = {
 };
 projectInfos.push(paintingsAngularJS);
 
+const taskManagerNextjs = {
+  title: "Task Governor",
+  descr: "A basic todo list website made using NextJS, shadcn/ui, and MongoDB.",
+  github: "https://github.com/MMojtaba/task-manager-nextjs",
+  video: "https://www.youtube.com/embed/f5IbSDRAgnA",
+};
+projectInfos.push(taskManagerNextjs);
+
 const snakeEvolution = {
   title: "Snake Evolution",
   descr: "The Snake game made using C++ and OpenGL.",
