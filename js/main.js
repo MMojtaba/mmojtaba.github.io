@@ -27,11 +27,11 @@ const snakeEvolution = {
 projectInfos.push(snakeEvolution);
 
 const teamerinoAngular = {
-  title: "Teamerino Angular (coming soon...)",
+  title: "Teamerino Angular",
   descr:
-    "A complete remake of my Teamerino website, which allows people to find teams, be it for sports, gaming, or work. Made using Angular (TypeScript), Express (TypeScript), and MongoDB.",
-  site: "NA",
-  image: "./assets/teamerinoAngular/img1.png",
+    "A complete remake of my Teamerino website, which allows people to find teams, be it for sports, gaming, or work. Made using Angular, Express, and MongoDB.",
+  github: "https://github.com/MMojtaba/teamerino-angular",
+  video: "https://www.youtube.com/embed/KohGEGpYfQk",
 };
 projectInfos.push(teamerinoAngular);
 
@@ -40,7 +40,7 @@ const teamerinoOriginal = {
   descr:
     "The initial version of my Teamerino website made using React (JavaScript), Asp.Net Core (C#), and MySQL.",
   github: "https://github.com/MMojtaba/teamerino",
-  image: "./assets/teamerinoOriginal/img1.png",
+  video: "https://www.youtube.com/embed/9s1vI-6Zo6U",
 };
 projectInfos.push(teamerinoOriginal);
 
@@ -124,13 +124,13 @@ function changeSelectedList() {
 // Animates switching the selected project
 function playSwitchAnimation() {
   const selectedContainerElement = document.getElementById(
-    "selected-project-container"
+    "selected-project-container",
   );
   if (selectedContainerElement) {
     selectedContainerElement.classList.add("switch-animation");
     window.setTimeout(
       () => selectedContainerElement.classList.remove("switch-animation"),
-      1000
+      1000,
     );
   }
 }
