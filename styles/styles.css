@@ -71,7 +71,7 @@ h1 {
 }
 
 .switch-animation {
-  animation: brightness-change 1s infinite;
+  animation: brightness-change 0.5s;
 }
 
 @media (orientation: portrait) {

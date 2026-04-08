@@ -144,9 +144,9 @@ function playSwitchAnimation() {
   );
   if (selectedContainerElement) {
     selectedContainerElement.classList.add("switch-animation");
-    window.setTimeout(
+    setTimeout(
       () => selectedContainerElement.classList.remove("switch-animation"),
-      1000,
+      600,
     );
   }
 }
