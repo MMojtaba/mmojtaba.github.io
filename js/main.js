@@ -1,48 +1,62 @@
 const projectInfos = [];
 let selectedProject = 0;
 
-const paintingsAngularJS = {
-  title: "Paintings Display",
-  descr:
-    "Website for displaying paintings. Made using AngularJS, Express, and MongoDB.",
-  github: "https://github.com/MMojtaba/paintings-angularjs",
-  video: "https://www.youtube.com/embed/_dd8cADE_Po",
-};
-projectInfos.push(paintingsAngularJS);
+function init() {
+  const teamerinoAngular = {
+    title: "Teamerino Angular",
+    descr:
+      "A complete remake of my Teamerino website, which allows people to find teams, be it for sports, gaming, or work. Made using Angular, Express, and MongoDB.",
+    github: "https://github.com/MMojtaba/teamerino-angular",
+    video: "https://www.youtube.com/embed/KohGEGpYfQk",
+    thumbnail: "./assets/teamerinoAngular/img1.png",
+  };
+  projectInfos.push(teamerinoAngular);
 
-const taskManagerNextjs = {
-  title: "Task Governor",
-  descr: "A basic todo list website made using NextJS, shadcn/ui, and MongoDB.",
-  github: "https://github.com/MMojtaba/task-manager-nextjs",
-  video: "https://www.youtube.com/embed/f5IbSDRAgnA",
-};
-projectInfos.push(taskManagerNextjs);
+  const paintingsAngularJS = {
+    title: "Paintings Display",
+    descr:
+      "Website for displaying paintings. Made using AngularJS, Express, and MongoDB.",
+    github: "https://github.com/MMojtaba/paintings-angularjs",
+    video: "https://www.youtube.com/embed/_dd8cADE_Po",
+    thumbnail: "./assets/paintingsAngularJS/img1.png",
+  };
+  projectInfos.push(paintingsAngularJS);
 
-const snakeEvolution = {
-  title: "Snake Evolution",
-  descr: "The Snake game made using C++ and OpenGL.",
-  github: "https://github.com/MMojtaba/snake_evolution",
-  video: "https://www.youtube.com/embed/BZs0yAohxcM",
-};
-projectInfos.push(snakeEvolution);
+  const taskManagerNextjs = {
+    title: "Task Governor",
+    descr:
+      "A basic todo list website made using NextJS, shadcn/ui, and MongoDB.",
+    github: "https://github.com/MMojtaba/task-manager-nextjs",
+    video: "https://www.youtube.com/embed/f5IbSDRAgnA",
+    thumbnail: "./assets/taskGovernor/img1.png",
+  };
+  projectInfos.push(taskManagerNextjs);
 
-const teamerinoAngular = {
-  title: "Teamerino Angular",
-  descr:
-    "A complete remake of my Teamerino website, which allows people to find teams, be it for sports, gaming, or work. Made using Angular, Express, and MongoDB.",
-  github: "https://github.com/MMojtaba/teamerino-angular",
-  video: "https://www.youtube.com/embed/KohGEGpYfQk",
-};
-projectInfos.push(teamerinoAngular);
+  const snakeEvolution = {
+    title: "Snake Evolution",
+    descr: "The Snake game made using C++ and OpenGL.",
+    github: "https://github.com/MMojtaba/snake_evolution",
+    video: "https://www.youtube.com/embed/BZs0yAohxcM",
+    thumbnail: "./assets/snakeEvolution/img1.png",
+  };
+  projectInfos.push(snakeEvolution);
 
-const teamerinoOriginal = {
-  title: "Teamerino Original",
-  descr:
-    "The initial version of my Teamerino website made using React (JavaScript), Asp.Net Core (C#), and MySQL.",
-  github: "https://github.com/MMojtaba/teamerino",
-  video: "https://www.youtube.com/embed/9s1vI-6Zo6U",
-};
-projectInfos.push(teamerinoOriginal);
+  const teamerinoOriginal = {
+    title: "Teamerino Original",
+    descr:
+      "The initial version of my Teamerino website made using React (JavaScript), Asp.Net Core (C#), and MySQL.",
+    github: "https://github.com/MMojtaba/teamerino",
+    video: "https://www.youtube.com/embed/9s1vI-6Zo6U",
+    thumbnail: "./assets/teamerinoOriginal/img1.png",
+  };
+  projectInfos.push(teamerinoOriginal);
+
+  setTimeout(() => {
+    createProjectSelectButtons(projectInfos);
+    handleSelectProject(selectedProject, false);
+  });
+}
+init();
 
 // Switch the shown project in an interval
 const intervalFuncId = setInterval(function () {
@@ -74,7 +88,9 @@ function handleSelectProject(index, userAction = true) {
     descrElement.textContent = projectInfos[selectedProject]?.descr;
 
   //   Set Github link
-  const githubElement = document.getElementById("main-link");
+  const githubElement = /** @type {HTMLAnchorElement} */ (
+    document.getElementById("main-link")
+  );
   if (githubElement) githubElement.href = projectInfos[selectedProject]?.github;
 
   //   Set Media
@@ -132,5 +148,26 @@ function playSwitchAnimation() {
       () => selectedContainerElement.classList.remove("switch-animation"),
       1000,
     );
+  }
+}
+
+/** Creates the project select list */
+function createProjectSelectButtons(projects) {
+  const projectListContainer = document.getElementsByClassName(
+    "proj-list-container",
+  )?.[0];
+  if (!projectListContainer) {
+    console.error("Project list element not found");
+    return;
+  }
+
+  for (const [index, project] of projects.entries()) {
+    /** @type {HTMLImageElement} */
+    const imgEl = document.createElement("img");
+    imgEl.id = `proj-${index}`;
+    imgEl.classList.add("media", "media-list");
+    imgEl.src = project.thumbnail;
+    imgEl.onclick = () => handleSelectProject(index);
+    projectListContainer.appendChild(imgEl);
   }
 }

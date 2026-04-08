@@ -7,10 +7,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles/styles.css" />
-    <script
-      type="text/javascript"
-      src="https://cdn.tailwindcss.com/3.4.3"
-    ></script>
+    <script type="text/javascript" src="styles/tailwind_3.4.3.js"></script>
 
     <!-- JavaScripts -->
     <script type="text/javascript" src="js/main.js"></script>
@@ -20,37 +17,6 @@
     <section class="flex flex-col w-1/5 m-4 proj-list-container">
       <h1 class="text-4xl">My Projects</h1>
       <div class="underline"></div>
-
-      <img
-        id="proj-0"
-        class="media media-list selected-element"
-        src="./assets/paintingsAngularJS/img1.png"
-        onclick="handleSelectProject(0)"
-      />
-      <img
-        id="proj-1"
-        class="media media-list"
-        src="./assets/taskGovernor/img1.png"
-        onclick="handleSelectProject(1)"
-      />
-      <img
-        id="proj-2"
-        class="media media-list"
-        src="./assets/snakeEvolution/img1.png"
-        onclick="handleSelectProject(2)"
-      />
-      <img
-        id="proj-3"
-        class="media media-list"
-        src="./assets/teamerinoAngular/img1.png"
-        onclick="handleSelectProject(3)"
-      />
-      <img
-        id="proj-4"
-        class="media media-list"
-        src="./assets/teamerinoOriginal/img1.png"
-        onclick="handleSelectProject(4)"
-      />
     </section>
 
     <!-- The selected project's info -->
@@ -60,26 +26,18 @@
     >
       <!-- Title section -->
       <span class="flex flex-row items-center">
-        <h1 id="main-title" class="text-4xl">Paintings Display</h1>
-        <a
-          id="main-link"
-          class="github-btn"
-          href="https://github.com/MMojtaba/paintings-angularjs"
-          >GitHub</a
-        >
+        <h1 id="main-title" class="text-4xl"></h1>
+        <a id="main-link" class="github-btn" href="">GitHub</a>
       </span>
       <!-- Video/Image -->
-      <iframe
+      <img
         id="main-video"
         class="media w-11/12 h-4/6"
-        src="https://www.youtube.com/embed/_dd8cADE_Po"
+        src="./assets/teamerinoAngular/img1.png"
         allowfullscreen
-      ></iframe>
+      />
       <!-- Description -->
-      <p id="main-descr">
-        Website for displaying paintings. Made using AngularJS, Express, and
-        MongoDB.
-      </p>
+      <p id="main-descr"></p>
     </section>
   </body>
 </html>
