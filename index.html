@@ -8,33 +8,29 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles/styles.css" />
-    <script type="text/javascript" src="styles/tailwind_3.4.3.js"></script>
 
     <!-- JavaScripts -->
     <script type="text/javascript" src="js/main.js"></script>
   </head>
-  <body class="flex flex-row main-container">
+  <body class="main-container">
     <!-- The left selection part -->
-    <section class="flex flex-col w-1/5 m-4 proj-list-container">
+    <section class="proj-list-container">
       <h1>My Projects</h1>
       <div class="underline"></div>
     </section>
 
     <!-- The selected project's info -->
-    <section
-      id="selected-project-container"
-      class="w-3/4 m-4 flex flex-col items-center"
-    >
+    <section id="selected-project-container">
       <!-- Title section -->
-      <span class="flex flex-row items-center">
+      <span class="proj-title-container">
         <h1 id="main-title"></h1>
         <a id="main-link" class="github-btn" href="">GitHub</a>
       </span>
       <!-- Video/Image -->
       <img
         id="main-video"
-        class="media w-11/12 h-4/6"
-        src="./assets/teamerinoAngular/img1.png"
+        class="media"
+        src="./assets/teamerinoAngular/img1.jpeg"
         allowfullscreen
       />
       <!-- Description -->

@@ -8,7 +8,9 @@ body {
 }
 
 h1 {
-  font-size: min(2.25rem, 3vw) !important;
+  font-size: 2.25rem;
+  font-weight: normal;
+  margin: 0.1rem;
 }
 
 .underline {
@@ -23,6 +25,8 @@ h1 {
   border-style: solid;
   border-color: rgb(2, 183, 248);
   margin: 1rem;
+  width: 92%;
+  height: 67%;
 }
 
 .media-list {
@@ -40,6 +44,8 @@ h1 {
 
 .github-btn {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 4rem;
   height: 1.2rem;
   background-color: rgb(109, 7, 241);
@@ -49,8 +55,6 @@ h1 {
   text-decoration: none;
   font-weight: bold;
   font-size: 0.9rem;
-  justify-content: center;
-  align-items: center;
 }
 
 .selected-element {
@@ -72,6 +76,32 @@ h1 {
 
 .switch-animation {
   animation: brightness-change 0.5s;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.proj-list-container {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  width: 20%;
+}
+
+#selected-project-container {
+  width: 75%;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.proj-title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 @media (orientation: portrait) {
