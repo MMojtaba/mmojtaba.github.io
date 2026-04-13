@@ -56,7 +56,8 @@ function init() {
     handleSelectProject(selectedProject, false);
   });
 }
-init();
+
+window.addEventListener("load", init, { once: true });
 
 // Switch the shown project in an interval
 const intervalFuncId = setInterval(function () {

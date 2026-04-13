@@ -31,6 +31,7 @@ h1 {
 
 .media-list {
   cursor: pointer;
+  max-width: 20rem;
 }
 
 .media-list:hover {
@@ -106,13 +107,13 @@ h1 {
 
 @media (orientation: portrait) {
   .main-container {
-    flex-direction: column-reverse !important;
+    flex-direction: column-reverse;
   }
 
   .proj-list-container {
-    flex-direction: row !important;
+    flex-direction: row;
     align-items: center;
-    /* justify-items: center !important; */
+    width: 100%;
   }
 
   .proj-list-container > h1 {
