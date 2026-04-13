@@ -8,7 +8,7 @@ function init() {
       "A complete remake of my Teamerino website, which allows people to find teams, be it for sports, gaming, or work. Made using Angular, Express, and MongoDB.",
     github: "https://github.com/MMojtaba/teamerino-angular",
     video: "https://www.youtube.com/embed/KohGEGpYfQk",
-    thumbnail: "./assets/teamerinoAngular/img1.png",
+    thumbnail: "./assets/teamerinoAngular/img1.jpeg",
   };
   projectInfos.push(teamerinoAngular);
 
@@ -18,7 +18,7 @@ function init() {
       "Website for displaying paintings. Made using AngularJS, Express, and MongoDB.",
     github: "https://github.com/MMojtaba/paintings-angularjs",
     video: "https://www.youtube.com/embed/_dd8cADE_Po",
-    thumbnail: "./assets/paintingsAngularJS/img1.png",
+    thumbnail: "./assets/paintingsAngularJS/img1.jpeg",
   };
   projectInfos.push(paintingsAngularJS);
 
@@ -28,7 +28,7 @@ function init() {
       "A basic todo list website made using NextJS, shadcn/ui, and MongoDB.",
     github: "https://github.com/MMojtaba/task-manager-nextjs",
     video: "https://www.youtube.com/embed/f5IbSDRAgnA",
-    thumbnail: "./assets/taskGovernor/img1.png",
+    thumbnail: "./assets/taskGovernor/img1.jpeg",
   };
   projectInfos.push(taskManagerNextjs);
 
@@ -37,7 +37,7 @@ function init() {
     descr: "The Snake game made using C++ and OpenGL.",
     github: "https://github.com/MMojtaba/snake_evolution",
     video: "https://www.youtube.com/embed/BZs0yAohxcM",
-    thumbnail: "./assets/snakeEvolution/img1.png",
+    thumbnail: "./assets/snakeEvolution/img1.jpeg",
   };
   projectInfos.push(snakeEvolution);
 
@@ -47,7 +47,7 @@ function init() {
       "The initial version of my Teamerino website made using React (JavaScript), Asp.Net Core (C#), and MySQL.",
     github: "https://github.com/MMojtaba/teamerino",
     video: "https://www.youtube.com/embed/9s1vI-6Zo6U",
-    thumbnail: "./assets/teamerinoOriginal/img1.png",
+    thumbnail: "./assets/teamerinoOriginal/img1.jpeg",
   };
   projectInfos.push(teamerinoOriginal);
 
