@@ -57,7 +57,21 @@ function init() {
   });
 }
 
-window.addEventListener("load", init, { once: true });
+window.addEventListener(
+  "load",
+  () => {
+    init();
+
+    // To disable auto switch when clicking the youtube video
+    window.focus();
+    window.addEventListener(
+      "blur",
+      () => setTimeout(() => clearAutoSwitch(), 0),
+      { once: true },
+    );
+  },
+  { once: true },
+);
 
 // Switch the shown project in an interval
 const intervalFuncId = setInterval(function () {
@@ -66,10 +80,14 @@ const intervalFuncId = setInterval(function () {
   handleSelectProject(selectedProject, false);
 }, 5000);
 
+function clearAutoSwitch() {
+  clearInterval(intervalFuncId);
+}
+
 // Changes the shown project when the user clicks one
 function handleSelectProject(index, userAction = true) {
   // Stop auto switching if user selects a project
-  if (userAction) clearInterval(intervalFuncId);
+  if (userAction) clearAutoSwitch();
 
   selectedProject = index;
 
