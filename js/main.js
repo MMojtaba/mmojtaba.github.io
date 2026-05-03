@@ -22,6 +22,15 @@ function init() {
   };
   projectInfos.push(paintingsAngularJS);
 
+  const bcTransitFriend = {
+    title: "BC Transit Friend",
+    descr: "An iOS SwiftUI app that shows bus locations in real time.",
+    github: "https://github.com/MMojtaba/BCTransitFriend",
+    video: "https://www.youtube.com/embed/cJwXFYQCWJc",
+    thumbnail: "./assets/bcTransitFriend/img1.jpeg",
+  };
+  projectInfos.push(bcTransitFriend);
+
   const taskManagerNextjs = {
     title: "Task Governor",
     descr:

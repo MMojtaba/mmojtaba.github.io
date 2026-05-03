@@ -32,6 +32,8 @@ h1 {
 .media-list {
   cursor: pointer;
   max-width: 20rem;
+  max-height: 10rem;
+  object-fit: contain;
 }
 
 .media-list:hover {
