@@ -171,7 +171,7 @@ h1 {
   cursor: pointer;
   border: 1px solid rgb(117, 42, 175);
   border-radius: 0.5rem;
-  padding: 1rem;
+  padding: 0.5rem;
   background-color: rgb(34, 8, 54);
   text-decoration: none;
   color: white;
@@ -181,6 +181,8 @@ h1 {
   filter: brightness(1.5);
 }
 
-.game-card > h1 {
+.game-card > h1,
+h2 {
   margin-bottom: 0.5rem;
+  margin-top: 0;
 }
